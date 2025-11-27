@@ -1,0 +1,27 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@nuxtjs/i18n": "^10.2.1",
+    "nuxt": "^3.14.1592",
+    "vue": "latest",
+    "vue-router": "latest",
+    "vue3-carousel": "^0.15.1"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.28.0",
+    "@babel/preset-typescript": "^7.27.1",
+    "jest": "^30.0.5",
+    "sass": "^1.83.0",
+    "vue-i18n": "^11.2.2"
+  }
+}
