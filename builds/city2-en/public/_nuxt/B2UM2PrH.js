@@ -1,0 +1,1 @@
+import{g as e,k as a,c as o,a as s,t as c,j as n,o as i}from"./CpLwSxd_.js";const r={class:"container"},d={__name:"[city]",setup(l){const{locale:_,t}=e();return a({title:t("about_h1")+" | Title",ogTitle:t("about_h1")+" | Title",description:t("about_h1")+" | Description"}),(u,p)=>(i(),o("div",r,[s("h1",null,c(n(t)("about_h1")),1)]))}};export{d as default};

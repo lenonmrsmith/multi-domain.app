@@ -8,7 +8,13 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "test": "jest"
+    "test": "jest",
+    "generate:city1": "NUXT_PUBLIC_CITY='city1' nuxt generate",
+    "generate:city1-en": "NUXT_PUBLIC_CITY='city1' NUXT_PUBLIC_LANG='en' nuxt generate",
+    "generate:city2": "NUXT_PUBLIC_CITY='city2' nuxt generate",
+    "generate:city2-en": "NUXT_PUBLIC_CITY='city2' NUXT_PUBLIC_LANG='en' nuxt generate",
+    "generate:all": "npm run generate:city1 && npm run generate:city1-en && npm run generate:city2 && npm run generate:city2-en"
+    
   },
   "dependencies": {
     "@nuxtjs/i18n": "^10.2.1",
