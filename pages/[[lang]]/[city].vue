@@ -10,7 +10,7 @@
   const { locale, t } = useI18n();
 
   const {data: catalog} = await useAsyncData<Catalog>('catalog-' + cityCode.value, async () =>
-      $fetch<Catalog, any, any>("http://localhost:3000/api/load-catalog/", {query: {city: cityCode.value, 'lang': langRef.value}, server: true})
+      $fetch<Catalog, any, any>("/api/load-catalog/", {query: {city: cityCode.value, 'lang': langRef.value}, server: true})
   );
 
   await setCatalog(catalog);

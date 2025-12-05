@@ -34,7 +34,7 @@
   }
 
   const {data: cityInfoDate} = await useAsyncData<CityInfo>('city-' + cityCode.value, async () =>
-      $fetch<CityInfo, any, any>("http://localhost:3000/api/load-city-info/", {query: {city: cityCode.value, 'lang': langRef.value}, server: true})
+      $fetch<CityInfo, any, any>("/api/load-city-info/", {query: {city: cityCode.value, 'lang': langRef.value}, server: true})
   );
 
   useSeoMeta({

@@ -1,0 +1,1 @@
+import{g as e,k as c,c as a,a as o,t as s,j as n,o as i}from"./Di1Ywre3.js";const r={class:"container"},d={__name:"[city]",setup(l){const{locale:_,t}=e();return c({title:t("contact_h1")+" | Title",ogTitle:t("contact_h1")+" | Title",description:t("contact_h1")+" | Description"}),(p,u)=>(i(),a("div",r,[o("h1",null,s(n(t)("contact_h1")),1)]))}};export{d as default};
