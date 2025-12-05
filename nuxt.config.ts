@@ -38,7 +38,7 @@ export default defineNuxtConfig({
   },
   nitro: {
     output: {
-      dir: `./builds/${process.env.NUXT_PUBLIC_CITY || 'city1'}-${process.env.NUXT_PUBLIC_LANG || 'ru'}`
+      dir: `./builds/${process.env.NUXT_PUBLIC_CITY || 'default-city'}-${process.env.NUXT_PUBLIC_LANG || 'default-lang'}`
     }
   },
 
