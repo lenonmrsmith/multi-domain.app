@@ -35,7 +35,8 @@ services:
       - PORT=3000
       - CHOKIDAR_USEPOLLING=true
       - WATCHPACK_POLLING=true
-    command: sh -c "npm install && npm run dev"
+      - NPM_CONFIG_REGISTRY=https://registry.npmmirror.com
+    command: sh -c "npm install && npm run build && npm run preview"
     networks:
       - app-network
 
