@@ -1,13 +1,15 @@
 import {CityInfo, SeoMeta} from "~/utils/types";
 
 export default defineEventHandler(async (event: any) => {
+    const config = useRuntimeConfig()
     const query = getQuery(event);
     const action = getRouterParam(event, 'action');
     const lang = query.lang;
+    const city = config.public.city || query.city;
 
     // const runtimeConfig = await useRuntimeConfig();
     // // @ts-ignore
-    // return event.$fetch<CityInfo, any, any>(runtimeConfig.private.externalApiUrl, {params: {"action": "load-app-info", "city": query.city, "version": "v2"}});
+    // return event.$fetch<CityInfo, any, any>(runtimeConfig.private.externalApiUrl, {params: {"action": "load-app-info", "city": city, "version": "v2"}});
     //
 
     if(action === "load-catalog"){
@@ -137,7 +139,7 @@ export default defineEventHandler(async (event: any) => {
     }
 
     if(action === "load-city-info") {
-        if (query.city === "city1") {
+        if (city === "city1") {
             if (lang === "en") {
                 return {
                     phone: "222-333",
@@ -163,18 +165,28 @@ export default defineEventHandler(async (event: any) => {
 
         }
 
-        if (query.city === "city2") {
+        if (city === "city2") {
             if (lang === "en") {
                 return {
                     phone: "555-333",
-                    address: "Address 1, 2",
+                    address: "Moyakovscay 1",
                     schedule: "10:00 - 22:00",
                     seo_meta: {
-                        title: "City 1 | Title",
-                        description: "City 1 | Description",
+                        title: "City 2 | Title",
+                        description: "City 2 | Description",
                     }
                 };
             }
+
+            return {
+                phone: "555-333",
+                address: "МОЯКОВСКАЯ Д.1",
+                schedule: "10:00 - 22:00",
+                seo_meta: {
+                    title: "Город 2 | Title",
+                    description: "Город 2 | Description",
+                }
+            };
         }
 
         if (lang === "en") {
